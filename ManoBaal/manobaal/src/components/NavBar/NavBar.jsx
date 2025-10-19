@@ -12,6 +12,8 @@ const Navbar = () => {
   localStorage.removeItem(token); // or sessionStorage
   console.log(localStorage.getItem('token')); 
 
+ 
+
   navigate('/login'); // redirect to login
 };
 
@@ -276,7 +278,12 @@ const Navbar = () => {
             >
               <span className="text-xl mr-2">📞</span>
               Login
-            </NavLink>: 'user logged in'}
+            </NavLink>:   <NavLink
+          to="/"
+          className="  bg-gradient-to-r from-fuchsia-500 to-indigo-500 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition-transform hover:scale-105"
+        >
+          🧠  Logout
+        </NavLink>}
         </div>
       )}
     
